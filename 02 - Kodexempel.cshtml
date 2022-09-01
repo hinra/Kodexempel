@@ -1,0 +1,67 @@
+﻿
+@*====================== Kodexempel A  start ====================================*@
+@page
+@model IndexModel
+@{
+   
+    int counter = 10; 
+    string IdagOchNu = DateTime.Now.ToString("yy-MM-dd HH:mm:ss");
+
+
+    string MittNamn(string fn, string en)
+    {
+        return en + ", " + fn; 
+    }
+
+}
+
+<link rel="stylesheet" href="myformat.css"> 
+
+<div class="text-center" style="background-color: lightgreen; ">
+    <h1 class="display-4">Välkommen!!!</h1>
+       <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   <p>Dag och tid: @IdagOchNu</p>
+
+    @{
+        counter++;
+    }
+   
+   <ul>        
+        <li>@MittNamn("Ralf", "Hintz")</li>
+        <li>@(counter * 5)</li>
+        <li>@counter * 5</li>
+    </ul>
+</div>
+<hr />
+
+
+@*====================== Kodexempel A  slut ====================================*@
+
+@*====================== Kodexempel B  start ====================================*@
+
+  <ul>
+    @for(int i = 1; i <11; i++)
+    {
+        <li>@i. listelement</li>
+    }
+    </ul>
+
+</div>
+<hr />
+<ul>
+ @{
+     for(int i = 11; i <21; i++)
+   {
+        <li>@i. listelement</li>
+    }
+}
+</ul>
+
+@*====================== Kodexempel C  start ====================================*@
+@{
+    string[] elever = { "Hussen", "Leon", "Ghaith", "Leon", "Fredrik",
+       "Emil", "Matteo", "Oliver", "Oscar", "Emmanuel", "Vilhelm", "Kristean",
+       "Kevin", "August", "Amir Hossain", "Sara", "Oskar", "Erwin", "Noah",
+       "Erik", "Jens" };
+}
+@*====================== Kodexempel C  slut ====================================*@
